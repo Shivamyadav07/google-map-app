@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon"
+    href="data:image/png;base64,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" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,12 +23,13 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>Google Map</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -39,5 +39,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
