@@ -15,7 +15,6 @@ const center = {
 
 function Map({ marker }) {
     const options = {
-        fillOpacity: 1,
         strokeColor: "red",
         strokeOpacity: 1,
         strokeWeight: 2,
@@ -30,13 +29,12 @@ function Map({ marker }) {
         <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={5}
+            zoom={7}
         >
             {
                 marker.map((e) => {
                     return <Marker
-                        lat={e.lat}
-                        lng={e.lng}
+                        position={e}
                     />
                 })
             }
